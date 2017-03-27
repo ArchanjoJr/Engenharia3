@@ -1,8 +1,7 @@
 package controller;
 import java.util.Date;
-
 import  model.*;
-
+import java.util.LinkedList;
 public class RelatorioEstoquista implements Relatorio {
 
 
@@ -12,6 +11,7 @@ public class RelatorioEstoquista implements Relatorio {
 	private Date dataEntrada;
 	
 	public void gerarRelatorio(SpecProduto busca){
+		
 		
 	}
 	
