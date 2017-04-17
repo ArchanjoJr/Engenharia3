@@ -2,6 +2,6 @@ package model;
 
 public enum Funcao {
 
-	Estoquista,Vendedor,gerente;
+	Estoquista,Vendedor,Gerente;
 	
 }

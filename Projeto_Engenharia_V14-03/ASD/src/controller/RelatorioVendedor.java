@@ -1,6 +1,6 @@
 package controller;
 import  model.*;
-
+@SuppressWarnings("unused")
 public class RelatorioVendedor implements Relatorio {
 	private int preco;
 	private int qtdProduto;

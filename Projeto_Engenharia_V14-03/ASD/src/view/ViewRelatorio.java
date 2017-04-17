@@ -3,7 +3,7 @@ package view;
 import java.util.List;
 
 import controller.*;
-
+@SuppressWarnings("unused")
 public class ViewRelatorio implements Observer {
 
 	private Relatorio relatorio;
