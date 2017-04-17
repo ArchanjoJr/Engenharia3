@@ -2,6 +2,12 @@ package model;
 
 public class EspecFunc {
 	
+	public EspecFunc(Funcao nome, Double salario) {
+		super();
+		this.nome = nome;
+		this.salario = salario;
+	}
+	
 	private Funcao nome;
 	private Double salario;
 	
