@@ -1,5 +1,5 @@
 package model;
-
+//mudança pesquisa buscar produtos: nome e id
 import java.sql.Date;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -61,15 +61,15 @@ public class BancoDados implements Subject {
 	
 	
 	
-	public boolean buscarProduto(Produto p) {
+	public Produto buscarProduto(Produto p) {
 		
 		for (int i = 0;i < produtos.size();i++){
-			if(produtos.get(i).equals(p)){
-				System.out.println(p.getNome());
-				return true;
+			System.out.println(i);
+			if(produtos.get(i).getNome() == p.getNome() || produtos.get(i).getId() == p.getId()){
+				return produtos.get(i);
 			}
 		}
-		return false;
+		return null;
 		
 	}
 
