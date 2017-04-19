@@ -1,22 +1,22 @@
 package controller;
+
 import java.util.Date;
 
-import  model.*;
+import model.*;
 
 import java.util.LinkedList;
+
+
 @SuppressWarnings("unused")
 public class RelatorioEstoquista implements Relatorio {
-
-
 	
-	private int idProduto;
-	private int qtdProduto;
-	private String fornecedor;
-	private Date dataEntrada;
-	
-	public void gerarRelatorio(SpecProduto busca){
-		
+	public Produto gerarRelatorio(Produto p) {
+		BancoDados bd = BancoDados.getInstancia();
+		Produto resultado = bd.buscarProduto(p);
+		return (Produto) resultado;
 		
 	}
+
 	
+
 }
