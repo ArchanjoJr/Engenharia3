@@ -1,5 +1,6 @@
 package model;
-//mudança pesquisa buscar produtos: nome e id
+
+//mudanï¿½a pesquisa buscar produtos: nome e id
 import java.sql.Date;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -18,65 +19,65 @@ public class BancoDados implements Subject {
 	private LinkedList<Produto> produtos;
 	private LinkedList<Funcionario> funcionarios;
 	private static BancoDados instancia;
-	
-	
-	
-	private BancoDados(){
-		produtos  = new LinkedList();
+
+	private BancoDados() {
+		produtos = new LinkedList();
 		funcionarios = new LinkedList();
 	}
-	
-	
-	public void addFunc(Funcionario f){
+
+	public void addFunc(Funcionario f) {
 		funcionarios.add(f);
 	}
-	
-	public void removerFunc(Funcionario f){
+
+	public void removerFunc(Funcionario f) {
 		funcionarios.remove(f);
 	}
-	public boolean buscarFunc(Funcionario f){
-		for (int i = 0;i < funcionarios.size();i++){
-			if(funcionarios.get(i).equals(f)){
+
+	public boolean buscarFunc(Funcionario f) {
+		for (int i = 0; i < funcionarios.size(); i++) {
+			if (funcionarios.get(i).equals(f)) {
 				System.out.println(f.getNome());
 				return true;
 			}
 		}
 		return false;
-		
+
 	}
-	public void addProduto(Produto p) {	
+
+	public void addProduto(Produto p) {
 		produtos.addFirst(p);
 	}
+
 	public void removerProduto(Produto p) {
 		produtos.remove(p);
 	}
 
-	
-	public static BancoDados getInstancia(){
-		if(instancia == null){
-			instancia  = new BancoDados();
+	public static BancoDados getInstancia() {
+		if (instancia == null) {
+			instancia = new BancoDados();
 		}
 		return instancia;
 	}
-	
-	
-	
+
 	public Produto buscarProduto(Produto p) {
-		
-		for (int i = 0;i < produtos.size();i++){
-			System.out.println(i);
-			if(produtos.get(i).getNome() == p.getNome() || produtos.get(i).getId() == p.getId()){
-				return produtos.get(i);
+		if (p == null) {
+			System.out.println("PRODUTO INVALIDO OU NULO !");
+		} else {
+
+			for (int i = 0; i < produtos.size(); i++) {
+
+				if (produtos.get(i).getNome() == p.getNome() || produtos.get(i).getId() == p.getId()) {
+					return produtos.get(i);
+				}
 			}
+			
 		}
-		return null;
-		
+		return p;
 	}
 
-	
 	public int getQtd() {
 		int acc = 0;
-		for(int i = 0;i < produtos.size();i++){
+		for (int i = 0; i < produtos.size(); i++) {
 			acc++;
 		}
 		return acc;

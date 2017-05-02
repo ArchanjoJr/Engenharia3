@@ -28,11 +28,11 @@ public class SpecProduto {
 		return this.dataEstoque;
 	}
 
-	public Double getPreçoFinal() {
+	public Double getPrecoFinal() {
 		return this.precoFinal;
 	}
 
-	public Double getPreçoCompra() {
+	public Double getPrecoCompra() {
 		return this.precoCompra;
 	}
 
