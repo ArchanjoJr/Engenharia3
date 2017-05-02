@@ -6,17 +6,22 @@ import model.*;
 
 import java.util.LinkedList;
 
-
 @SuppressWarnings("unused")
 public class RelatorioEstoquista implements Relatorio {
-	
-	public Produto gerarRelatorio(Produto p) {
-		BancoDados bd = BancoDados.getInstancia();
-		Produto resultado = bd.buscarProduto(p);
-		return (Produto) resultado;
-		
-	}
 
-	
+	public String[] gerarRelatorio(Produto p) {
+		BancoDados bd = BancoDados.getInstancia();
+		Produto res = bd.buscarProduto(p);
+
+		if (res == null) {
+
+			return null;
+		} else {
+			String[] resultado = { Integer.toString(res.getId()), Integer.toString(res.getQtd()),
+					res.getSpec().getDataEstoque(), res.getSpec().getFornecedor() };
+			return resultado;
+		}
+
+	}
 
 }
