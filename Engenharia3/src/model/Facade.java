@@ -9,8 +9,8 @@ public class Facade {
 		Produto a = new Produto("PENDRIVE", 1 ,25 , new SpecProduto("PENDRIVE 16GB KINGSTON", "10/01/2017", 9.95, 19.90, "KINGSTON LTDA"));
 		Produto b = new Produto("MEMORIA SSD", 2 ,225 , new SpecProduto("MEMORIA SSD 120GB SANDISK", "01/02/2016", 159.00, 299.00, "VITAO ME"));
 		Produto c = new Produto("IPAD APPLE", 3 ,2 , new SpecProduto("IPAD AIR 32GB WIFI SILVER", "12/12/2016", 1999.00, 2999.00, "APPLE DO BRASIL LTDA"));
-		Produto d = new Produto("HD SAMSUNG", 1 ,2 , new SpecProduto("HD SATA 500 GB SAMSUNG", "01/05/2015", 99.00, 199.00, "SAMSUNG DO BRASIL"));
-		Produto e = new Produto("PILHA AA RECARREGAVEL",2,3, new SpecProduto("PILHA SONY AA RECARREGAVEL DE 2500 MA","10/05/2014",22.00,49.00,"SONY LTDA"));
+		Produto d = new Produto("HD SAMSUNG", 4 ,2 , new SpecProduto("HD SATA 500 GB SAMSUNG", "01/05/2015", 99.00, 199.00, "SAMSUNG DO BRASIL"));
+		Produto e = new Produto("PILHA AA RECARREGAVEL",5,3, new SpecProduto("PILHA SONY AA RECARREGAVEL DE 2500 MA","10/05/2014",22.00,49.00,"SONY LTDA"));
 		
 		bd.addProduto(a);
 		bd.addProduto(b);

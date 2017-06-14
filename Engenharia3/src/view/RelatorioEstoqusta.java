@@ -8,10 +8,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import controller.RelatorioEstoquista;
 import model.Produto;
+import model.SpecProduto;
 
 public class RelatorioEstoqusta implements ActionListener {
 
@@ -20,7 +23,6 @@ public class RelatorioEstoqusta implements ActionListener {
 	JPanel painelbotao = new JPanel();
 	JButton buscar = new JButton("BUSCAR");
 	JButton voltar = new JButton("VOLTAR");
-
 	JTextField idProd = new JTextField(5);
 	JTextField nomeProd = new JTextField(50);
 	JTextField descricao = new JTextField(15);
@@ -112,11 +114,19 @@ public class RelatorioEstoqusta implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if(event.getSource() == buscar) {
-			
+			if (idProd.getText().isEmpty() || nomeProd.getText().isEmpty()|| descricao.getText().isEmpty() || fornecedor.getText().isEmpty()) {
+				JOptionPane.showMessageDialog(null,"ALgum Campo Vazio");
+				
+			}else{
+				RelatorioEstoqusta r = new RelatorioEstoqusta();
+				RelatorioEstoquista re = new RelatorioEstoquista(); 
+				r.criarRelatorio(re.gerarRelatorio(new Produto(nomeProd.getText(),Integer.parseInt(idProd.getText()), Integer.parseInt(idProd.getText()), new SpecProduto(descricao.getText(), null, null, null, fornecedor.getText()))));
+
+			}
 		}
 		
 		if(event.getSource() == voltar) {
-			
+			janela.setVisible(false);
 		}
 		if(event.getSource()== novaBusca) {
 			janela2.dispose();
