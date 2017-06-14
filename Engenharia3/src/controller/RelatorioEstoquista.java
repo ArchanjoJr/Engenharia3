@@ -10,7 +10,7 @@ import java.util.LinkedList;
 @SuppressWarnings("unused")
 public class RelatorioEstoquista implements Relatorio {
 
-	public String[] gerarRelatorio(Produto p) {
+	public Produto gerarRelatorio(Produto p) {
 		BancoDados bd = BancoDados.getInstancia();
 		Produto res = bd.buscarProduto(p);
 
@@ -18,11 +18,9 @@ public class RelatorioEstoquista implements Relatorio {
 
 			return null;
 		} else {
-			String[] resultado = { Integer.toString(res.getId()), Integer.toString(res.getQtd()),
-					res.getSpec().getDataEstoque(), res.getSpec().getFornecedor() };
-			return resultado;
+			return res;
+			}
+
 		}
 
 	}
-
-}

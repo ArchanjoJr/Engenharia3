@@ -8,6 +8,7 @@ import view.*;
 public class Teste {
 
 	public static void main(String[] args) {
+
 		BancoDados bd = BancoDados.getInstancia();
 		Facade facade = new Facade();
 		facade.iniciarBDFuncionario();
@@ -24,8 +25,13 @@ public class Teste {
 //		BuscarFuncionario bf = new BuscarFuncionario();
 //		bf.criarPainel();
 		RelatorioEstoqusta re = new RelatorioEstoqusta();
-		Produto e = new Produto("PILHA AA RECARREGAVEL",2,3, new SpecProduto("PILHA SONY AA RECARREGAVEL DE 2500 MA","10/05/2014",22.00,49.00,"SONY LTDA"));
-		re.criarRelatorio(e);
+//		RelatorioEstoquista rec = new RelatorioEstoquista();
+		
+//		Produto e = new Produto("PILHA AA RECARREGAVEL",5,3, new SpecProduto("PILHA SONY AA RECARREGAVEL DE 2500 MA","10/05/2014",22.00,49.00,"SONY LTDA"));
+//		Produto e = new Produto("PILHA AA RECARREGAVEL",4,0, null);
+		 
+		re.criarPainel();
+		
 	}
 
 }

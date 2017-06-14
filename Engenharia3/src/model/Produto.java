@@ -39,10 +39,9 @@ public class Produto {
 		this.nome = nome;
 	}
 
-//	public void setId() {
-//		this.id = this.id + seq;
-//		seq++;
-//	}
+	public void setId(int id ) {
+		this.id = this.id;
+	}
 
 	public void setEspec(SpecProduto espec) {
 		this.espec = espec;
