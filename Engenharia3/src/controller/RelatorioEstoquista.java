@@ -6,6 +6,7 @@ import model.*;
 
 import java.util.LinkedList;
 
+//estoquista ve:id, qtd, data de armazenamento, fornecedor
 @SuppressWarnings("unused")
 public class RelatorioEstoquista implements Relatorio {
 

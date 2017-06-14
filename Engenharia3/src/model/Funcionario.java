@@ -1,21 +1,21 @@
 package model;
-
-import java.util.Date;
-
 public class Funcionario {
- 
-	private int id;
+	private String id;
 	private String nome;
 	private String endereco;
 	private String rg;
 	private String cpf;
 	private String dataAdmissao;
 	private EspecFunc especificacaoFunc;
+	private String senha;
 	
-	public int getId() {
+	public String  getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setarID(String i) {
+		this.id = i;
+	}
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getNome() {
@@ -30,8 +30,16 @@ public class Funcionario {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
+	
 	public String getRg() {
 		return rg;
+	}
+	
+	public String getSenha() {
+		return this.senha;
+	}
+	public void setSenha(String s) {
+		this.senha = s;
 	}
 	public void setRg(String rg) {
 		this.rg = rg;
@@ -54,8 +62,8 @@ public class Funcionario {
 	public void setEspecificacaoFunc(EspecFunc especificacaoFunc) {
 		this.especificacaoFunc = especificacaoFunc;
 	}
-	public Funcionario(int id, String nome, String endereco, String rg,
-			String cpf, String dataAdmissao, EspecFunc especificacaoFunc) {
+	public Funcionario(String id, String nome, String endereco, String rg,
+			String cpf, String dataAdmissao, EspecFunc especificacaoFunc,String senha) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -64,6 +72,7 @@ public class Funcionario {
 		this.cpf = cpf;
 		this.dataAdmissao = dataAdmissao;
 		this.especificacaoFunc = especificacaoFunc;
+		this.senha = senha;
 	}
 	
 	

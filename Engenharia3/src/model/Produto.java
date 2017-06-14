@@ -2,7 +2,7 @@ package model;
 
 public class Produto {
 
-	private static int seq = 0;
+//	private static int seq = 0;
 	private String nome;
 	private int id;
 	private int qtd;
@@ -39,10 +39,10 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public void setId() {
-		this.id = this.id + seq;
-		seq++;
-	}
+//	public void setId() {
+//		this.id = this.id + seq;
+//		seq++;
+//	}
 
 	public void setEspec(SpecProduto espec) {
 		this.espec = espec;

@@ -10,8 +10,8 @@ public class SpecProduto {
 	private Double precoCompra;
 	private String fornecedor;
 
-	public SpecProduto(String descricao, String dataEstoque, Double precoFinal,
-			Double precoCompra, String fornecedor) {
+	public SpecProduto(String descricao, String dataEstoque, Double precoCompra,
+			Double precoFinal, String fornecedor) {
 
 		this.descricao = descricao;
 		this.dataEstoque = dataEstoque;
