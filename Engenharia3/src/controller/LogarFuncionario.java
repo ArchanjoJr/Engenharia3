@@ -22,7 +22,6 @@ public class LogarFuncionario implements Logar {
 				return false;
 			}
 		}else {
-			
 			return false;
 		}
 	}

@@ -61,7 +61,7 @@ public class BancoDados implements Subject {
 	
 	public Funcionario buscarFuncionario(Funcionario f) {
 		for(int i = 0;i <funcionarios.size();i++) {
-			if(f.getId().equals(funcionarios.get(i).getId()) && f.getCpf().equals(funcionarios.get(i).getCpf())) {
+			if(f.getId().equals(funcionarios.get(i).getId())) {
 				return funcionarios.get(i);
 			}
 		}
